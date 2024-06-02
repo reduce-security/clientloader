@@ -12,6 +12,7 @@ This script prevents cheaters from **stealing client files (lua only)**
 - Basic Lua knowledge
 
 ➡️ [Support Discord](https://reduce-security.net/discord)
+
 ➡️ [Documentation](https://docs.reduce-security.net/)
 
 Made possible by [fiveguard.net](https://fiveguard.net)
