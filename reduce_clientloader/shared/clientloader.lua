@@ -1,4 +1,4 @@
--- Made by discord.gg/reduce-store
+-- Made by https://reduce-security.net/discord
 local _exports = exports
 
 local metadataString = GetConvar("reduce_clientloader:metadataString", "reduce_clientloader")
