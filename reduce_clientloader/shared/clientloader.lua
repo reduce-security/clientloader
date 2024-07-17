@@ -10,7 +10,9 @@ local loaded = false
 
 if resourceFiles > 0 then
     local function encrypt(data, key)
-        if type(key) == "string" then key = tonumber(key) end
+        if type(key) == "string" then 
+            key = tonumber(key) 
+        end
 
         local result = ""
 
@@ -31,9 +33,9 @@ if resourceFiles > 0 then
         local files = {}
 
         CreateThread(function()
-            while GetConvar("𝔯𝔢𝔡𝔲𝔠𝔢_𝔠𝔩𝔦𝔢𝔫𝔱𝔩𝔬𝔞𝔡𝔢𝔯", 0) == "0" do Wait(500) end
+            while GetConvarInt("𝔯𝔢𝔡𝔲𝔠𝔢_𝔠𝔩𝔦𝔢𝔫𝔱𝔩𝔬𝔞𝔡𝔢𝔯", 0) == "0" do Wait(500) end
 
-            local convar = GetConvar("𝔯𝔢𝔡𝔲𝔠𝔢_𝔠𝔩𝔦𝔢𝔫𝔱𝔩𝔬𝔞𝔡𝔢𝔯", 0)
+            local convar = GetConvarInt("𝔯𝔢𝔡𝔲𝔠𝔢_𝔠𝔩𝔦𝔢𝔫𝔱𝔩𝔬𝔞𝔡𝔢𝔯", 0)
 
             for i=1, resourceFiles do
                 local name = GetResourceMetadata(resourceName, metadataString, i -1)
@@ -80,7 +82,7 @@ if resourceFiles > 0 then
 
             loaded = true
 
-            local convar = GetConvar("𝔯𝔢𝔡𝔲𝔠𝔢_𝔠𝔩𝔦𝔢𝔫𝔱𝔩𝔬𝔞𝔡𝔢𝔯", 0)
+            local convar = GetConvarInt("𝔯𝔢𝔡𝔲𝔠𝔢_𝔠𝔩𝔦𝔢𝔫𝔱𝔩𝔬𝔞𝔡𝔢𝔯", 0)
 
             for _, data in ipairs(files) do
                 local spawned, error = pcall(load(decrypt(data.file, convar), ("@reduce_clientloader: @%s:%s"):format(resourceName, data.name), "bt"))
