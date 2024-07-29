@@ -3,7 +3,7 @@
 Kerimhmad = {}
 
 Kerimhmad.Prefix = "reduce-clientloader"
-Kerimhmad.Version = "1.1.0"
+Kerimhmad.Version = "1.1.1"
 Kerimhmad.ResourceName = GetCurrentResourceName()
 
 function Kerimhmad:LogError(message)
